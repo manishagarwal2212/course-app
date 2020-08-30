@@ -1,4 +1,4 @@
-package com.edukart.course.app;
+package com.edukart.course;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,7 @@ public class CourseAppApplication {
 		SpringApplication.run(CourseAppApplication.class, args);
 	}
 	
-	@GetMapping()
+	@GetMapping("/hello")
 	String hello() {
 		return "Welcome to content service";
 	}
