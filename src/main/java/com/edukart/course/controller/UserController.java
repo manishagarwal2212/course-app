@@ -1,5 +1,6 @@
 package com.edukart.course.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -23,6 +24,11 @@ public class UserController {
 	@PostMapping("/users/")
 	public UserDetailsDto registerUser(@RequestBody UserDetailsDto userDetailsDto) {
 		return userRepo.save(userDetailsDto);
+	}
+	
+	@GetMapping("/users/")
+	public List<UserDetailsDto> getrUsers() {
+		return userRepo.findAll();
 	}
 	
 	@GetMapping("/users/{id}")
