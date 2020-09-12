@@ -1,4 +1,4 @@
-package com.edukart.course;
+package com.edukart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

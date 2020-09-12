@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.edukart.course.entity.Course;
+import com.edukart.course.entity.CourseDto;
 import com.edukart.course.repo.CourseRepo;
 
 
@@ -17,17 +17,17 @@ public class CourseService {
 	@Autowired 
 	CourseRepo repository;
 	
-    public void add(Course dto) {
+    public void add(CourseDto dto) {
         repository.save(dto);
     }
     public void delete(long id) {
         repository.deleteById(id);
     }
-    public List<Course> getCourses() {
-        return (List<Course>) repository.findAll();
+    public List<CourseDto> getCourses() {
+        return (List<CourseDto>) repository.findAll();
     }
-    public Course getCourseById(long id) {
-        Optional<Course> optionalCourse = repository.findById(id);
+    public CourseDto getCourseById(long id) {
+        Optional<CourseDto> optionalCourse = repository.findById(id);
         return optionalCourse.get();
     }
     

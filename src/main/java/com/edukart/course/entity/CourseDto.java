@@ -1,21 +1,21 @@
 package com.edukart.course.entity;
 
-import java.util.List;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 
-@Entity
-public class Course {
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.Id;
+
+
+//@Entity
+public class CourseDto {
 	
-	@Id
-    @GeneratedValue
+//	@Id
+//    @GeneratedValue
 	private long id;
 	private String title;
 	private long categoryId;
-//	private List<Content> contentList;
+	
 	public long getId() {
 		return id;
 	}

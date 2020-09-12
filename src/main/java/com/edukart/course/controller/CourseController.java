@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edukart.course.entity.Course;
+import com.edukart.course.entity.CourseDto;
 import com.edukart.course.service.CourseService;
 
 
@@ -29,17 +29,17 @@ public class CourseController {
     
     
     @GetMapping
-    public List<Course> getCourses() {
+    public List<CourseDto> getCourses() {
         return service.getCourses();
     }
     
     @PostMapping
-    public void postCourses(@RequestBody Course dto) {
+    public void postCourses(@RequestBody CourseDto dto) {
         service.add(dto);
     }
     
     @GetMapping("/{id}")
-    public Course getById(@PathVariable(required = true) long id) {
+    public CourseDto getById(@PathVariable(required = true) long id) {
         return service.getCourseById(id);
     }
     
