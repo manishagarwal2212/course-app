@@ -2,8 +2,8 @@ package com.edukart.course.repo;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.edukart.course.entity.UserDetailsDto;
+import com.edukart.models.UserDetails;
 
-public interface UserDetailsRepo extends MongoRepository<UserDetailsDto,Long> {
+public interface UserDetailsRepo extends MongoRepository<UserDetails,Long> {
 
 }

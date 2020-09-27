@@ -11,8 +11,10 @@ public class UserDetails {
 	
 	@Id
 	private long id;
-	private String name;
-	private int age;
+	private String userName;
+	private String firstName;
+	private String middleName;
+	private String lastName;
 	private Gender gender;
 	private String password;
 	private String emailId;
@@ -23,17 +25,30 @@ public class UserDetails {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	
+	public String getUserName() {
+		return userName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
-	public int getAge() {
-		return age;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getMiddleName() {
+		return middleName;
+	}
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	public Gender getGender() {
 		return gender;

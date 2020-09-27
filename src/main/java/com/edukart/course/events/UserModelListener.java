@@ -6,11 +6,11 @@ import org.springframework.data.mongodb.core.mapping.event.AbstractMongoEventLis
 import org.springframework.data.mongodb.core.mapping.event.BeforeConvertEvent;
 import org.springframework.stereotype.Component;
 
-import com.edukart.course.entity.UserDetailsDto;
 import com.edukart.course.service.SequenceGeneratorService;
+import com.edukart.models.UserDetails;
 
 @Component
-public class UserModelListener extends AbstractMongoEventListener<UserDetailsDto> {
+public class UserModelListener extends AbstractMongoEventListener<UserDetails> {
 
     private SequenceGeneratorService sequenceGenerator;
 
@@ -20,9 +20,9 @@ public class UserModelListener extends AbstractMongoEventListener<UserDetailsDto
     }
 
     @Override
-    public void onBeforeConvert(BeforeConvertEvent<UserDetailsDto> event) {
+    public void onBeforeConvert(BeforeConvertEvent<UserDetails> event) {
         if (event.getSource().getId() < 1) {
-            event.getSource().setId(sequenceGenerator.generateSequence(UserDetailsDto.SEQUENCE_NAME));
+            event.getSource().setId(sequenceGenerator.generateSequence(UserDetails.SEQUENCE_NAME));
         }
     }
 

@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edukart.course.entity.UserDetailsDto;
 import com.edukart.course.repo.UserDetailsRepo;
+import com.edukart.models.UserDetails;
 
 @RestController
 public class UserController {
@@ -22,17 +22,17 @@ public class UserController {
 	UserDetailsRepo userRepo;
 	
 	@PostMapping("/users/")
-	public UserDetailsDto registerUser(@RequestBody UserDetailsDto userDetailsDto) {
+	public UserDetails registerUser(@RequestBody UserDetails userDetailsDto) {
 		return userRepo.save(userDetailsDto);
 	}
 	
 	@GetMapping("/users/")
-	public List<UserDetailsDto> getrUsers() {
+	public List<UserDetails> getUsers() {
 		return userRepo.findAll();
 	}
 	
 	@GetMapping("/users/{id}")
-	public Optional<UserDetailsDto> getUser(@PathVariable long id) {
+	public Optional<UserDetails> getUser(@PathVariable long id) {
 		return userRepo.findById(id);
 	}
 
