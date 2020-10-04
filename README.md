@@ -5,5 +5,7 @@ Motive of this project is to develop and host Open Source REST APIs using Spring
 Soon to come Docs for APIs.
 
 Current hosted over: https://coursekart-app.herokuapp.com/ 
+Swagger Link: https://coursekart-app.herokuapp.com/api-store/swagger-ui
+
 
 
